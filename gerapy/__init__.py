@@ -3,6 +3,8 @@ from os import makedirs
 import logging
 from gerapy import settings
 import sys
+import pymysql
+pymysql.install_as_MySQLdb()
 
 
 def version():

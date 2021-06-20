@@ -82,18 +82,26 @@ WSGI_APPLICATION = 'gerapy.server.server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DB_SUBDIR = 'dbs'
-DB_DIR = os.path.join(os.getcwd(), DB_SUBDIR)
-
+# DB_SUBDIR = 'dbs'
+# DB_DIR = os.path.join(os.getcwd(), DB_SUBDIR)
 # Create DB dir if it does not exist
-os.path.exists(DB_DIR) or os.makedirs(DB_DIR)
-
-DB_PATH = os.path.join(DB_DIR, 'db.sqlite3')
+# os.path.exists(DB_DIR) or os.makedirs(DB_DIR)
+# DB_PATH = os.path.join(DB_DIR, 'db.sqlite3')
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': DB_PATH,
+#     }
+# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': DB_PATH,
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'crawler',
+        'USER': 'afnews_app',
+        'PASSWORD': 'dfkf4jJJ',
+        'HOST': '172.31.37.123',
+        'PORT': '3570',
     }
 }
 
